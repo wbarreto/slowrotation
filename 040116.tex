@@ -1,0 +1,309 @@
+\documentclass[twocolumn,superscriptaddress]{revtex4}
+\usepackage[applemac]{inputenc}
+\usepackage{hyperref,amssymb,amsmath,mathrsfs,bm,graphicx,color}
+\begin{document}
+\title{{Radiating and slowly rotating bodies: the stationary case}}
+\author{W. Barreto}
+\affiliation{Centro de F\'\i sica Fundamental, Facultad de Ciencias, Universidad de Los Andes, M\'erida 5101, Venezuela}
+\affiliation{Departamento de F\'\i sica Te\'orica, Instituto de F\'\i sica A. D. Tavares,
+Universidade do Estado do Rio de Janeiro, R. S\~ao Francisco Xavier, 524, Rio de Janeiro,\\
+Rio de Janeiro 20550-013, Brasil}
+\author{L. A. N\'u\~nez}
+\affiliation{Centro de F\'\i sica Fundamental, Facultad de Ciencias, Universidad de Los Andes, M\'erida 5101, Venezuela}
+\affiliation{Escuela de F\'\i sica, Universidad Industrial de Santander Bucaramanga, Santander, Colombia}
+\date{\today}
+\begin{abstract}
+We extend a framework to study radiating and slowly rotating bodies when the transport mechanisms go from streaming out to diffusion. Currently the junction conditions at the boundary surface restrict severely the dynamics and the angular structure of spacetime. Within this context we obtain axisymmetric stationary solutions to the Einstein equations to conjecture the existence of the {post-quasi-stationay} regime.
+\end{abstract}
+\maketitle
+\section{Introduction}
+Consideration of rotating sources is an awkward task in the characteristic formulation of Numerical General Relativity \cite{w12, bv06, pi98}. However, there are approximations to the Kerr metric which are interesting from the astrophysical point of view. Is the case of the Kerr-Vaidya metric \cite{ck77} and its applications (see Ref. \cite{hmnp94} and references therein). Pulsars with period of rotation of milliseconds lie in this spectrum \cite{bk90,wgw91}.  
+
+Are available different methods to consider slowly and stationary rotation in General Relativity, both analytically and numerically \cite{h67,ht68}. Few methods consider time-dependent evolutions, one of them is the post-quasi-static (PQS) approximation. It remains interesting to study non-stationary evolutions under slow rotation. 
+
+The PQS regime was introduced to model gravitational collapse of general relativistic radiating spheres \cite{hjr80,hbds02}, including axisymmetric radiating bodies in the slow rotation approximation \cite{hmnp94}. Essentially the PQS approximation grows up from a static seed. What about a spherical seed? Here we explore a more physically appropriate approximation, expecting that the next step beyond sphericity departing equilibrium (stationarity) in the context of rotation is the post-quasi-stationaty (PQS$^+$) regime. As a first step we look for stationary equilibria in the PQS original approach. In any case we only consider relativistic effects.
+
+\section{Building the field equations}
+The framework let us to obtain the field equations systematically in the slow rotation approximation. For the sake of clarity we make a detailed account of the physical content of the spacetime and the way we proceed from the very beggining.
+\subsection{The Vaidya-Kerr metric}
+The interior metric is written as \cite{HerreraJimenez1982} 
+\begin{eqnarray}
+&&ds^2=(Ydu+2X^{-1}dr)Ydu\nonumber\\
+&&+2\left(X^{-1}-Y\right)Ya\sin ^2\theta
+dud\phi -2aYX^{-1}\sin ^2\theta drd\phi \nonumber \\
+&&-R^2d\theta ^2-\sin ^2\theta \left[ R^2 +a^2\sin ^2\theta
+\left( 2YX^{-1}-{Y^2}\right) \right] d\phi^2,\nonumber \\
+ \label{metricin0}
+\end{eqnarray}
+where $u=x^0$ is a timelike coordinate, $r=x^1$ is the null coordinate and $%
+\theta =x^2$ and $\phi =x^3$ are the usual angle coordinates. Here $%
+R^2=r^2+a^2\cos ^2\theta $, $a$ is the angular momentum per unit mass in the weak field limit -the Kerr parameter-, and $X$ and $Y$ are arbitrary functions of $u$, $r$ and $\theta $. The $u$-coordinate is related to retarded time in a flat space-time and therefore, $u$-constant surfaces are null cones open to the future. In these coordinates $r$-constant surfaces are oblate spheroids.
+Now, this metric in the approximation of slow rotation ($a^2\rightarrow 0$) is
+\begin{eqnarray}
+ds^2&=&(Ydu+2X^{-1}dr)Ydu \nonumber\\
+&+&2\left(X^{-1}-Y\right)Ya\sin ^2\theta dud\phi \nonumber\\
+&-&2aYX^{-1}\sin ^2\theta drd\phi-r^2(d\theta ^2+\sin ^2\theta d\phi^2) ,  \label{metricin1}
+\end{eqnarray}
+which can be written as
+\begin{eqnarray}
+ds^2&=&(Vr^{-1}du+2dr)e^{2\beta}du-r^2(d\theta^2+\sin ^2\theta d\phi^2)\nonumber \\
+&&+2ae^{2\beta}\left[(1-Vr^{-1}) du -dr\right]\sin ^2\theta d\phi,  \label{metricin2}
+\end{eqnarray}
+where $YX=V/r$ and $Y/X=e^{2\beta}$. This last form is clearly a second order approximation in $a$, i.e., $\mathcal{O}(a^2)$. Note that the first order is spherical (no rotation), only in form because $\beta$ and $V$ denpend on $u$, $r$ and $\theta$. Also we can introduce the mass aspect $m=m(u,r,\theta)$ by
+\begin{equation}
+V=e^{2\beta}(r-2m).
+\label{eme}
+\end{equation}
+From metric (\ref{metricin2}) and (\ref{eme}) we obtain straightforwardly a simplified form of the geometric side of the field equations.
+\begin{widetext}
+\subsection{Einstein tensor}
+We have ten components for the Einstein tensor, and only eight are independents:
+\begin{eqnarray}
+E_{uu}&=&\frac{e^{4\beta}}{r^2}\left\{ 2\left[m_{,u}e^{-2\beta}
+-m_{,r}\left(1-\frac{2m}{r}\right)\right]
++\frac{1}{r}\bigg(m_{,\theta\theta}+\cot\theta m_{,\theta}\bigg)
++3\beta_{,\theta}\left[\frac{2m_{,\theta}}{r}-\beta_{,\theta}\left(1-\frac{2m}{r}\right)\right]\right\},\\
+%\end{eqnarray}
+%\begin{eqnarray}
+E_{ur}&=&\frac{e^{2\beta}}{r^2}\bigg(\beta_{,\theta}^2+\beta_{,\theta\theta}+\cot\theta\beta_{,\theta}-2m_{,r}\bigg),\\
+%\end{eqnarray}
+%\begin{equation}
+E_{u\theta}&=&e^{2\beta}\left[ \beta_{,u\theta}e^{-2\beta}+\frac{4}{r}\beta_{,r}m_{,\theta}-\left(1-\frac{2m}{r}\right)\bigg(4\beta_{,r}\beta_{,\theta}+\beta_{,r\theta}\bigg)+\frac{2}{r}\beta_{,\theta}\left(m_{,r}-\frac{m}{r}\right)+\frac{1}{r}\left(m_{,r\theta}-\frac{m_{,\theta}}{r}\right)\right],\\
+%\end{eqnarray}
+%\begin{eqnarray}
+E_{u\phi}&=&a\sin^2\theta e^{2\beta}\left\{e^{2\beta}\bigg[\bigg(r-2m\bigg)\left(3\beta_{,\theta}^2+\frac{2m_{,r}}{r}-\frac{1}{r}\right)-\frac{1}{r^3}\bigg(m_{,\theta\theta}-6\beta_{,\theta}m_{,\theta}\bigg)\bigg]\right. \nonumber \\
+&+&\left(1-\frac{2m}{r}\right)\left(\frac{1}{r^2}+4\beta_{,r}^2-4\beta_{,r}\beta_{,u}+\beta_{,rr}-\beta_{,ur}\right) + \frac{1}{r^2}\bigg(\beta_{,\theta\theta}+\beta_{,\theta}^2\bigg)\nonumber\\
+&+&\frac{2}{r}\left[\beta_{,u}\left(m_{,r}-\frac{m}{r}\right)+\beta_{,r}\left(2m_{,u}+\frac{3m}{r}-3m_{,r}\right)\right] \nonumber \\
+&+& \frac{1}{r}\left(m_{,ur}-m_{,rr}-\frac{3m_{,u}}{r}\right)\nonumber \\
+&+& e^{-2\beta}(\beta_{,uu}-\beta_{,ur})\bigg\},\\
+%\end{eqnarray}
+%\begin{equation}
+E_{rr}&=&-4r^{-1}\beta_{,r},\\
+%\end{equation}
+%\begin{equation}
+E_{r\theta}&=&\beta_{,r\theta}-\frac{2}{r}\beta_{,\theta},\\
+%\end{equation}
+%\begin{equation}
+E_{r\phi}&=&a\sin^2\theta\left[\frac{1}{r^2}-\frac{2}{r}\left(\beta_{,u}-\beta_{,r}\right)+\beta_{,ur}-\beta_{rr} -\frac{e^{2\beta}}{r^2}\left(1-2m_{,r}\right) + \frac{e^{2\beta}}{r^2}(3\cot\theta\beta_{,\theta}-\beta_{,\theta}^2-\beta_{,\theta\theta})\right],\\
+%\end{equation}
+%\begin{eqnarray}
+E^\theta_\theta&=&-2e^{-2\beta}\beta_{,ur} + \left(1-\frac{2m}{r}\right)\left(2\beta_{,rr}+4\beta_{,r}^2-\frac{\beta_{,r}}{r}\right)+{r^{-1}}\left[3\beta_{,r}(1-2m_{,r})-m_{,rr}\right]\nonumber\\
+&+&{r^{-2}}(\beta_{\theta}^2+2\cot\theta\beta_{,\theta}),\\
+%\end{eqnarray}
+%\begin{eqnarray}
+E_{\theta\phi}&+&a\sin^2\theta E_{u\theta}=a\sin^2\theta[2(\beta_{,u}-\beta_{,r})\beta_{,\theta}-\beta_{,r\theta}],\\
+%\end{equation}
+%\begin{equation}
+E_{\phi}^{\phi}&-&E_{\theta}^{\theta}=\frac{2}{r^2}(\cot\theta\beta_{,\theta}-\beta_{,\theta\theta}-\beta_{,\theta}^2).
+\end{eqnarray}
+\end{widetext}
+The physical content of the Einstein equations deserves a detailed explanation.
+\subsection{Energy-momentum tensor}
+In order to give a clear physical meaning we proceed using Bondian observers, that is, local Minkowskian and comoving observers, which measure all the relevant physical variables. 
+\subsubsection{Local Minkowskian observer}
+Introducing the locally Minkowskian coordinates $(t,x,y,z)$ it is easy to check that the following tetrad 
+\begin{subequations}
+\begin{eqnarray}
+dt &=&(1-2m/r)^{1/2}e^{2\beta}(du-a\sin ^2\theta d\phi)\nonumber\\
+&+& (1-2m/r)^{-1/2}(dr+a\sin ^2\theta d\phi),
+\label{transform1} \\
+dx &=&(1-2m/r)^{-1/2}(dr+{a\sin ^2\theta }d\phi), \label{transform2} \\
+dy &=&r d\theta,  \label{transform3}\\
+dz &=&r\sin \theta d\phi, \label{transform4}
+\end{eqnarray}
+\end{subequations}
+leads to the metric (\ref{metricin2}) and to 
+\begin{eqnarray}
+\frac{dr}{du}&=&\frac{\omega_x}{1-\omega_x}(1-2m/r)e^{2\beta},\\
+\label{radialv}
+%\end{equation}
+%\begin{equation}
+\frac{d\phi}{du}&=&\frac{1}{r\sin\theta}\frac{\omega_z}{1-\omega_x} {(1-2m/r)}e^{2\beta},
+\label{orbitalv}
+\end{eqnarray}
+which are the radial matter velocity and the azimuthal (orbital) velocity, respectively.
+\subsubsection{Comoving observer}
+Thus, for a Bondian observer, moving with local velocity $\omega\approx\omega_x$, the spacetime contains
+\begin{equation}
+\tilde T_{\alpha\beta} =
+\left(
+\begin{array}{cccc}
+ \hat\rho& -\mathcal{F}  & 0  &0\\
+ -\mathcal{F} & \hat P  & 0 & 0\\
+ 0 & 0  & P_T & 0 \\
+ 0 &0& 0 &P_T
+\end{array}
+\right),
+\end{equation}
+where $\hat\rho=\rho +\rho_R$, $\hat P=P+\mathcal{P}$ and $P_T=P+(\rho_R-\mathcal{P})/2$. Observe that radiation makes the fluid anisotropic.
+\subsubsection{Infinitesimal Trocheris-Takeno boost}
+Using the following differential rotation, which is
+an infinitesimal Trocheris-Takeno boost
+\begin{equation}
+\mathcal{R}_\mu^{\,.\, \nu}=
+\left(
+\begin{array}{cccc}
+ 1 & 0  & 0 & \mathcal{D}\\
+ 0 & 1 & 0 & 0\\
+ 0 & 0  & 1 & 0 \\
+ \mathcal{D} & 0 & 0 & 1
+\end{array}
+\right),
+\label{old_rot}
+\end{equation}
+we get the locally dragged energy-momentum tensor
+\begin{eqnarray}
+T_{\mu\nu}^R&=&\mathcal{R}_\mu^{\,.\,\alpha} \tilde T_{\alpha\beta} \mathcal{R}_\nu^{\,.\,\beta}\nonumber\\
+&=&\left(
+\begin{array}{cccc}
+ \hat\rho& -\mathcal{F}  & 0  &\mathcal{D}(\hat\rho+P_T)\\
+ -\mathcal{F} & \hat P  & 0 & -\mathcal{D}\mathcal{F}\\
+ 0 & 0  & P_T& 0 \\
+ \mathcal{D}(\hat\rho+P_T) &-\mathcal{D}\mathcal{F}& 0 &P_T
+\end{array}
+\right).
+\end{eqnarray}
+(Observe how the rotation acts: $\mathcal{R}.\tilde T=T^R.\mathcal{R}^{-1}$).
+\subsubsection{Instantaneous double Lorentz boost}
+In the rotating case, the boost velocity has components $\omega_x$ in the radial direction and $\omega_z$ in the azimuthal direction, which represent the radial and orbital velocities of the fluid as measured by a local Minkowskian observer. In the slow rotating case $\omega_z^2\approx 0$. Thus, to get the local Minkowskian components of the evergy-momentum tensor we use
+\begin{equation}
+\hat T_{\alpha\delta}=\Lambda_\alpha^{\,.\,\mu} \tilde T_{\mu\nu} \Lambda_\delta^{\,.\,\nu}
+\end{equation}
+where
+\begin{equation}
+\Lambda_\alpha^{\,.\,\mu}=
+\left(
+\begin{array}{cccc}
+ \gamma & -\gamma\omega_x & 0 & -\gamma\omega_z\\
+ -\gamma\omega_x & \gamma & 0 & (\gamma-1)\displaystyle{\frac{\omega_z}{\omega_x}}\\
+ 0 & 0  & 1 & 0 \\
+ -\gamma\omega_z & (\gamma-1)\displaystyle{\frac{\omega_z}{\omega_x}} & 0 & 1
+\end{array}
+\right),
+\end{equation}
+with $\gamma=(1-\omega_x^2)^{-1/2}$.
+\subsubsection{From Minkowski to Bondi-Sachs components}
+Consequently, to get the Bondi-Sachs components of the Minkowski energy-momentum tensor components we have
+\begin{equation}
+T_{\mu\nu}=\frac{\partial\hat x^\alpha}{\partial x^\mu}\frac{\partial\hat x^\delta}{\partial x^\nu} \hat T_{\alpha\delta}
+\end{equation}
+where
+\begin{equation}
+\frac{\partial\hat x^\alpha}{\partial x^\mu}=
+\left(
+\begin{array}{cccc}
+ Y & X^{-1}  & 0  &(X^{-1}-Y)a\sin^2\theta\\
+ 0 & X^{-1} & 0 & X^{-1}a\sin^2\theta\\
+ 0 & 0  & r & 0 \\
+ 0 &0& 0 &r \sin\theta
+\end{array}
+\right).
+\end{equation}
+Thus,
+\begin{eqnarray}
+T_{u\theta}&=&T_{r\theta}=T_{\theta\phi}=0,\\
+%\end{eqnarray}
+%\begin{equation}
+T_{uu}&=&\frac{V}{r}e^{2\beta}\left[\frac{\hat\rho+\omega_x^2 \hat P}{1-\omega_x^2}+  \frac{2\mathcal{F}\omega_x}{1-\omega_x^2} \right]\nonumber\\
+&=&\frac{V}{r}e^{2\beta}\left[\frac{\bar\rho+\omega_x^2 \bar P}{1-\omega_x^2}+  \mathcal{F}\frac{1+\omega_x}{1-\omega_x^2} \right],\\
+%\end{eqnarray}
+%\begin{equation}
+T_{ur}&=&e^{2\beta}\left[ \frac{\hat\rho-\omega_x \hat P}{1+\omega_x}  -\mathcal{F}\frac{1-\omega_x}{1+\omega_x}\right]\nonumber\\
+&=&e^{2\beta}\left[ \frac{\bar\rho-\omega_x \bar P}{1+\omega_x}\right],\\
+%\end{eqnarray}
+%\begin{eqnarray}
+T_{u\phi}&=&re^{\beta}\left(\frac{V}{r}\right)^{1/2}\left(\frac{\omega_z}{\omega_x}\right)\left\{
+\frac{\mathcal{F}+\omega_x(\hat P-P_T)}{(1-\omega_x^2)^{1/2}} \right. \nonumber\\
+&-&\left.\frac{(\hat\rho+\hat P)\omega_x}{1-\omega_x^2}-\mathcal{F}\frac{1+\omega_x^2}{1-\omega_x^2}\right\}\nonumber\\
+&+&e^{2\beta} a \sin^2\theta\left\{ \frac{\hat\rho-\omega_x \hat P}{1+\omega_x}-\mathcal{F}\frac{1-\omega_x}{1+\omega_x} \right.\nonumber\\
+&-&\left.\frac{V}{r}\left[\frac{\hat\rho+\omega_x^2\hat P}{1-\omega_x^2}+\frac{2\mathcal{F}\omega_x}{1-\omega_x^2}\right]\right\}\nonumber\\
+&+&r\mathcal{D}\sin\theta e^{\beta}\left(\frac{V}{r}\right)^{1/2} \frac{(\hat\rho+P_T+\mathcal{F}\omega_x)}{(1-\omega_x^2)^{1/2}},\\
+%\end{eqnarray}
+%\begin{eqnarray}
+T_{rr}&=&\frac{r}{V}e^{2\beta}\left[ \frac{1-\omega_x}{1+\omega_x}(\hat\rho + \hat P)
+-2\mathcal{F}\frac{1-\omega_x}{1+\omega_x}\right]\nonumber\\
+&=&\frac{r}{V}e^{2\beta}\left[ \frac{1-\omega_x}{1+\omega_x}(\bar\rho + \bar P)
+\right],
+\end{eqnarray}
+\begin{eqnarray}
+T_{r\phi}&=&a\sin\theta^2 e^{2\beta}\left\{ \frac{r}{V}\left[(\hat\rho+\hat P)\frac{1-\omega_x}{1+\omega_x}-2\mathcal{F}\frac{1-\omega_x}{1+\omega_x}\right]\right.
+\nonumber\\
+&-&\left.\left[\frac{\hat\rho-\omega_x\hat P}{1+\omega_x}-\mathcal{F}\frac{1-\omega_x}{1+\omega_x}\right]\right\}\nonumber\\
+&+&r\sin\theta e^{\beta}\left(\frac{r}{V}\right)^{1/2}\left(\frac{\omega_z}{\omega_x}\right)\left\{ P_T + \frac{\hat P-\omega_x\hat\rho}{1+\omega_x}\right.\nonumber\\
+&-&\left.\mathcal{F}\frac{1-\omega_x}{1+\omega_x}-\left(\frac{1-\omega_x}{1+\omega_x}\right)^{1/2}{(\hat\rho-\mathcal{F})}\right\}\nonumber\\
+&+&r e^{\beta}\left(\frac{r}{V}\right)^{1/2}\mathcal{D}\sin\theta \left(\frac{1-\omega_x}{1+\omega_x}\right)^{1/2} \nonumber\\
+&\times&(\hat\rho+P_T-\mathcal{F}),\\
+%\end{eqnarray}
+%\begin{eqnarray}
+-T_\theta^\theta&=&-T_\phi^\phi=P_T =\bar P +\mathcal{F}+\frac{1}{2}(\rho_r-3\mathcal{P})
+\end{eqnarray}
+where $\bar\rho=\hat\rho-\mathcal{F}$ and $\bar P=\hat P - \mathcal{F}$.  In the diffusion limit $P_T=\bar P + \mathcal{F}$, in the streaming out limit $P_T=\bar P$. 
+{We can choose to write equivalently the energy-momentum components as for a diffusive anisotropic fluid or as for a streaming out isotropic fluid \cite{b10}.}
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+\begin{widetext}
+\subsection{Wrapping a tight bundle}
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+And finally the field equations adopt the following form:
+\begin{eqnarray}
+\left[\frac{\bar\rho+\omega_x^2 \bar P}{1-\omega_x^2}+  \mathcal{F}\frac{1+\omega_x}{1-\omega_x^2} \right]&=&\frac{1}{4\pi r (r-2m)}\left[-m_{,u} e^{-2\beta} + m_{,r}\left(1-\frac{2m}{r}\right)\right]\nonumber\\
+&-&\frac{1}{8\pi r(r-2m)}\left\{\frac{1}{r}\bigg(m_{,\theta\theta}+\cot\theta m_{,\theta}\bigg) + 3\beta_{,\theta}\left[\frac{2m_{,\theta}}{r}-\beta_{,\theta}\left(1-\frac{2m}{r}\right)\right]\right\}
+\end{eqnarray}
+\begin{equation}
+\tilde \rho = \frac{m_{,r}}{4\pi r^2} + \frac{1}{8\pi r^2}\bigg(\beta_{,\theta}^2+\beta_{,\theta\theta}+\cot\theta\beta_{,\theta}\bigg) \label{fe2}
+\end{equation}
+\begin{equation}
+\tilde\rho+\tilde P=\frac{(r-2m)}{2\pi r^2}\beta_{,r} \label{fe3}
+\end{equation}
+\begin{eqnarray}
+P_T&=&-\frac{1}{4\pi}e^{-2\beta}\beta_{,ur} + \frac{1}{8\pi}\left(1-\frac{2m}{r}\right)\left(2\beta_{,rr}+4\beta_{,r}^2-\frac{\beta_{,r}}{r}\right)+\frac{1}{8\pi r}\bigg[3\beta_{,r}(1-2m_{,r})-m_{,rr}\bigg]\nonumber\\
+&+&\frac{1}{8\pi r^2}\bigg(\beta_{\theta}^2+2\cot\theta\beta_{,\theta}\bigg)
+\end{eqnarray}
+\begin{equation}
+\beta_{,u\theta}e^{-2\beta}+\frac{4}{r}\beta_{,r}m_{,\theta}-\left(1-\frac{2m}{r}\right)\bigg(4\beta_{,r}\beta_{,\theta}+\beta_{,r\theta}\bigg)+\frac{2}{r}\beta_{,\theta}\left(m_{,r}-\frac{m}{r}\right)+\frac{1}{r}\left(m_{,r\theta}-\frac{m_{,\theta}}{r}\right)=0\label{utheta}
+\end{equation}
+\begin{equation}
+\beta_{,r\theta}-\frac{2}{r}\beta_{,\theta}=0 \label{rtheta}
+\end{equation}
+\begin{equation}
+a\sin^2\theta[2(\beta_{,u}-\beta_{,r})\beta_{,\theta}-\beta_{,r\theta}]=0
+\end{equation}
+%%%
+%%%%%u\phi
+%%%%
+\begin{eqnarray}
+&&r{\sin\theta}\left(1-\frac{2m}{r}\right)^{1/2}\left(\frac{\omega_z}{\omega_x}\right)\left\{
+\frac{\mathcal{F}+\omega_x(\hat P-P_T)}{(1-\omega_x^2)^{1/2}}
+-\frac{(\hat\rho+\hat P)\omega_x}{1-\omega_x^2}-\mathcal{F}\frac{1+\omega_x^2}{1-\omega_x^2}\right\}\nonumber\\
+&+& a \sin^2\theta\left\{ \frac{\hat\rho-\omega_x \hat P}{1+\omega_x}-\mathcal{F}\frac{1-\omega_x}{1+\omega_x} -e^{2\beta}\left(1-\frac{2m}{r}\right)\left[\frac{\hat\rho+\omega_x^2\hat P}{1-\omega_x^2}+\frac{2\mathcal{F}\omega_x}{1-\omega_x^2}\right]\right\}\nonumber\\
+&+&r\mathcal{D}\sin\theta \left(1-\frac{2m}{r}\right)^{1/2} \frac{(\hat\rho+P_T+\mathcal{F}\omega_x)}{(1-\omega_x^2)^{1/2}}=\nonumber \\
+&-& \frac{a\sin^2\theta }{8\pi}\left\{e^{2\beta}\bigg[\bigg(r-2m\bigg)\left(3\beta_{,\theta}^2+\frac{2m_{,r}}{r}-\frac{1}{r}\right)-\frac{1}{r^3}\bigg(m_{,\theta\theta}-6\beta_{,\theta}m_{,\theta}\bigg)\bigg]\right. \nonumber \\
+&+&\left(1-\frac{2m}{r}\right)\left(\frac{1}{r^2}+4\beta_{,r}^2-4\beta_{,r}\beta_{,u}+\beta_{,rr}-\beta_{,ur}\right) + \frac{1}{r^2}\bigg(\beta_{,\theta\theta}+\beta_{,\theta}^2\bigg)\nonumber\\
+&+&\frac{2}{r}\left[\beta_{,u}\left(m_{,r}-\frac{m}{r}\right)+\beta_{,r}\left(2m_{,u}+\frac{3m}{r}-3m_{,r}\right)\right] \nonumber \\
+&+& \frac{1}{r}\left(m_{,ur}-m_{,rr}-\frac{3m_{,u}}{r}\right)\nonumber \\
+&+& e^{-2\beta}(\beta_{,uu}-\beta_{,ur})\bigg\}
+\end{eqnarray}
+\begin{eqnarray}
+&&a\sin\theta^2 e^{2\beta}\left\{ \frac{e^{-2\beta}}{1-2m/r}\left[(\hat\rho+\hat P)\frac{1-\omega_x}{1+\omega_x}-2\mathcal{F}\frac{1-\omega_x}{1+\omega_x}\right]-\left[\frac{\hat\rho-\omega_x\hat P}{1+\omega_x}-\mathcal{F}\frac{1-\omega_x}{1+\omega_x}\right]\right\}\nonumber\\
+&+& \frac{r\sin\theta}{(1-2m/r)^{1/2}}\left(\frac{\omega_z}{\omega_x}\right)\left\{ P_T + \frac{\hat P-\omega_x\hat\rho}{1+\omega_x}-\mathcal{F}\frac{1-\omega_x}{1+\omega_x}-\left(\frac{1-\omega_x}{1+\omega_x}\right)^{1/2}{(\hat\rho-\mathcal{F})}\right\}\nonumber\\
+&+&\frac{\mathcal{D}r\sin\theta}{(1-2m/r)^{1/2}} \left(\frac{1-\omega_x}{1+\omega_x}\right)^{1/2} (\hat\rho+P_T-\mathcal{F})=\nonumber \\
+&-&\frac{a\sin^2\theta}{8\pi}\left[\frac{1}{r^2}-\frac{2}{r}\left(\beta_{,u}-\beta_{,r}\right)+\beta_{,ur}-\beta_{rr} -\frac{e^{2\beta}}{r^2}\left(1-2m_{,r}\right) + \frac{e^{2\beta}}{r^2}(3\cot\theta\beta_{,\theta}-\beta_{,\theta}^2-\beta_{,\theta\theta})\right]
+\end{eqnarray}
+where 
+\begin{equation}
+\tilde \rho=\frac{\bar\rho-\omega_x \bar P}{1+\omega_x}
+\end{equation}
+\begin{equation}
+\tilde P=\frac{\bar P-\omega_x \bar\rho}{1+\omega_x}
+\end{equation}
+\end{widetext}
+\bibliography{SlowRotationBiblio}
+\end{document}
+\thebibliography{99}
+\bibitem{HerreraJimenez1982} L. Herrera and J. Jim\'enez, J. Math. Phys. (1982).
+\bibitem{hmnp94} L. Herrera, A. Melfo, L. N\'u\~nez and A. Pati\~no, Astrophys. J. {\bf 421}, 677 (1994).
+\bibitem{h99} L. Herrera, Nuovo Cim. B, {\bf 115} 307 (2000).
+\end{document}
+\bibliography{SlowRotationBiblio}
